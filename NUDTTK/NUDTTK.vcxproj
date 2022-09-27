@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{9D41C219-C0B3-4050-8A04-1A590295644B}</ProjectGuid>
+    <RootNamespace>NUDTTK</RootNamespace>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
+    <Keyword>Win32Proj</Keyword>
+    <SccAuxPath>Svn</SccAuxPath>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseOfMfc>false</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-wd4996 -wd4819 %(AdditionalOptions)</AdditionalOptions>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>$(SolutionDir)\NUDTTKInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Math.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\debug;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-wd4996 -wd4819 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>$(SolutionDir)\NUDTTKInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Math.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(SolutionDir)\release;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AntPCVFile.cpp" />
+    <ClCompile Include="AttitudeTrans.cpp" />
+    <ClCompile Include="BDRawObsFile.cpp" />
+    <ClCompile Include="CLKFile.cpp" />
+    <ClCompile Include="DCBFile.cpp" />
+    <ClCompile Include="eopc04File.cpp" />
+    <ClCompile Include="eopc04TotalFile.cpp" />
+    <ClCompile Include="eopRapidFileIAU2000.cpp" />
+    <ClCompile Include="EphemerisPosVelFile.cpp" />
+    <ClCompile Include="erpCodeFile.cpp" />
+    <ClCompile Include="erpMgexGFZFile.cpp" />
+    <ClCompile Include="gamitRcvAntFile.cpp" />
+    <ClCompile Include="GNSSBasicCorrectFunc.cpp" />
+    <ClCompile Include="GNSSYawAttitudeModel.cpp" />
+    <ClCompile Include="GNSS_AttitudeFile.cpp" />
+    <ClCompile Include="GPSYawAttitudeModel1995.cpp" />
+    <ClCompile Include="igs05atxFile.cpp" />
+    <ClCompile Include="Ionex1_0_File.cpp" />
+    <ClCompile Include="ITRF08AprFile.cpp" />
+    <ClCompile Include="jplEphFile.cpp" />
+    <ClCompile Include="LTATTFile.cpp" />
+    <ClCompile Include="ManeuverlFile.cpp" />
+    <ClCompile Include="OceanTidesLoading.cpp" />
+    <ClCompile Include="Rinex2_1_EditedObsFile.cpp" />
+    <ClCompile Include="Rinex2_1_EditedSdObsFile.cpp" />
+    <ClCompile Include="Rinex2_1_MixedEditedObsFile.cpp" />
+    <ClCompile Include="Rinex2_1_MixedObsFile.cpp" />
+    <ClCompile Include="Rinex2_1_NavFile.cpp" />
+    <ClCompile Include="Rinex2_1_ObsFile.cpp" />
+    <ClCompile Include="Rinex3_03_EditedObsFile.cpp" />
+    <ClCompile Include="Rinex3_03_ObsFile.cpp" />
+    <ClCompile Include="Rinex3_0_MixedNavFile.cpp" />
+    <ClCompile Include="Rinex3_0_NavFile.cpp" />
+    <ClCompile Include="Rinex3_0_NavFile_iGMAS.cpp" />
+    <ClCompile Include="Rinex3_0_ObsFile.cpp" />
+    <ClCompile Include="RuningInfoFile.cpp" />
+    <ClCompile Include="Sinex2_0_File.cpp" />
+    <ClCompile Include="SinexBiasDCBFile.cpp" />
+    <ClCompile Include="SinexBiasOBSFile.cpp" />
+    <ClCompile Include="SolidTides.cpp" />
+    <ClCompile Include="SP3File.cpp" />
+    <ClCompile Include="StaOceanLoadingDisplacementFile.cpp" />
+    <ClCompile Include="stationInfoFile.cpp" />
+    <ClCompile Include="structDef.cpp" />
+    <ClCompile Include="svnavFile.cpp" />
+    <ClCompile Include="svnavMixedFile.cpp" />
+    <ClCompile Include="tai_utcFile.cpp" />
+    <ClCompile Include="TimeAccelerometerFile.cpp" />
+    <ClCompile Include="TimeAttitudeFile.cpp" />
+    <ClCompile Include="TimeCoordConvert.cpp" />
+    <ClCompile Include="TimePosVelFile.cpp" />
+    <ClCompile Include="Troposphere_model.cpp" />
+    <ClCompile Include="TROZPDFile.cpp" />
+    <ClCompile Include="wsbFile.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\NUDTTKInclude\AntPCVFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\AttitudeTrans.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\BDRawObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\CLKFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\constDef.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\DCBFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\dynPODStructDef.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\eopc04File.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\eopc04TotalFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\eopRapidFileIAU2000.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\EphemerisPosVelFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\erpCodeFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\erpMgexGFZFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\gamitRcvAntFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\GNSSBasicCorrectFunc.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\GNSSYawAttitudeModel.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\GNSS_AttitudeFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\GPSYawAttitudeModel1995.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\igs05atxFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Ionex1_0_File.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\ITRF08AprFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\jplEphFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\LTATTFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\ManeuverFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\OceanTidesLoading.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_EditedObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_EditedSdObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_MixedEditedObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_MixedObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_NavFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex2_1_ObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_03_EditedObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_03_ObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_0_MixedNavFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_0_NavFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_0_NavFile_iGMAS.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Rinex3_0_ObsFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\RuningInfoFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Sinex2_0_File.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\SinexBiasDCBFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\SinexBiasOBSFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\SolidTides.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\SP3File.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\StaOceanLoadingDisplacementFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\stationInfoFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\structDef.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\svnavFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\svnavMixedFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\tai_utcFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\TimeAccelerometerFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\TimeAttitudeFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\TimeCoordConvert.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\TimePosVelFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\Troposphere_model.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\TROZPDFile.hpp" />
+    <ClInclude Include="..\NUDTTKInclude\wsbFile.hpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Math\MATH.vcxproj">
+      <Project>{5abe7412-e359-47e5-a26d-823eda66c258}</Project>
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

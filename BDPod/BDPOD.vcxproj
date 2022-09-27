@@ -13,13 +13,11 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{4C4A274F-66DA-4AB2-9939-8FC558A76A11}</ProjectGuid>
     <RootNamespace>BDPOD</RootNamespace>
-    <SccProjectName>
-    </SccProjectName>
-    <SccLocalPath>
-    </SccLocalPath>
-    <SccProvider>
-    </SccProvider>
+    <SccProjectName>Svn</SccProjectName>
+    <SccLocalPath>Svn</SccLocalPath>
+    <SccProvider>SubversionScc</SccProvider>
     <Keyword>Win32Proj</Keyword>
+    <SccAuxPath>Svn</SccAuxPath>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
